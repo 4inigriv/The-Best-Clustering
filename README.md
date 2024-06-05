@@ -21,6 +21,6 @@ O código está implementado em **Python** e utiliza bibliotecas como:
 
 ## Links
 
-📖 [Visite meu Medium para mais informações](https://medium.com/@lownialore/melhor-algoritmo-de-clusteriza%C3%A7%C3%A3o-aplicado-em-audio-5fefea6a7de5)
+📖 [Visite meu Medium para mais informações, nele eu discuto qual algoritmo eu escolhi e os motivos](https://medium.com/@lownialore/melhor-algoritmo-de-clusteriza%C3%A7%C3%A3o-aplicado-em-audio-5fefea6a7de5)
 
 
