@@ -1,8 +1,8 @@
 import librosa
 import numpy as np
 import os
+audio_folder = 'C:\\Users\\vivia\\OneDrive\\Documentos\\GitHub\\TheBestClustering\\audios\\classificados-20240605T151508Z-001'
 
-audio_folder = 'C:\Users\vivia\OneDrive\Documentos\GitHub\TheBestClustering\audios\classificados-20240605T151508Z-001'
 # extrair MFCCs de um arquivo de áudio
 def extract_features(file_path):
     y, sr = librosa.load(file_path)
