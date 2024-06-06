@@ -1,26 +1,28 @@
+
+#aqui to usando o librosa p extrair as características
 import librosa
 import numpy as np
 import os
-audio_folder = 'C:\\Users\\vivia\\OneDrive\\Documentos\\GitHub\\TheBestClustering\\audios\\classificados-20240605T151508Z-001'
+from sklearn.cluster import AffinityPropagation
 
-# extrair MFCCs de um arquivo de áudio
+#coloca o caminho para a a pasta de localizada no seu computador 
+audio_folder = ''
+
+# extração de MFCCs 
 def extract_features(file_path):
     y, sr = librosa.load(file_path)
     mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
     return np.mean(mfccs.T, axis=0)
 
-# lista de arquivos de áudio e extração de características
 audio_files = [os.path.join(audio_folder, f) for f in os.listdir(audio_folder) if f.endswith('.mp3') or f.endswith('.wav')]
 features = [extract_features(file) for file in audio_files]
 
-
-from sklearn.cluster import AffinityPropagation
 
 #chamando o affinity propagation
 clustering = AffinityPropagation().fit(features)
 labels = clustering.labels_
 
-#verificando os clusters
+#verificando os clusterss
 unique_labels = set(labels)
 print(f'Número de clusters: {len(unique_labels)}')
 
