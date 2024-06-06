@@ -18,7 +18,6 @@ def extrair_caracteristicas(arquivo):
     mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
     mfcc_mean = np.mean(mfcc, axis=1)
     return mfcc_mean
-
 caracteristicas = np.array([extrair_caracteristicas(f) for f in arquivos_audio])
 
 # chamando o algoritmo MeanShift
